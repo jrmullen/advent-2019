@@ -5,6 +5,14 @@ do
   dir="day$i"
   mkdir -v $dir
   touch $dir/day$i.js
+
+  echo "const fs = require('fs');
+
+const input = fs.readFileSync('input.txt').toString().split('\n');
+
+
+" >> $dir/day$i.js
+
   touch $dir/input.txt
   touch $dir/README.md
 
