@@ -2,6 +2,9 @@ const fs = require('fs');
 
 const input = fs.readFileSync('input.txt').toString().split(',').map(Number);
 
+input[1] = 12;
+input[2] = 2;
+
 const add = (a, b) => {
     return a + b;
 };
