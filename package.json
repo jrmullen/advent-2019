@@ -1,0 +1,28 @@
+{
+  "name": "advent-2019",
+  "version": "1.0.0",
+  "description": "Advent of code 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrmullen/advent-2019.git"
+  },
+  "keywords": [
+    "advent",
+    "of",
+    "code",
+    "2019"
+  ],
+  "author": "Jeremy Mullen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrmullen/advent-2019/issues"
+  },
+  "homepage": "https://github.com/jrmullen/advent-2019#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
