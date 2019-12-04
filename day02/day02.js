@@ -47,4 +47,3 @@ const part2 = target => {
 
 console.log(`Part 1: ${part1(12, 2)}`);
 console.log(`Part 2: ${part2(19690720)}`);
-
