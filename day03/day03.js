@@ -1,5 +1,4 @@
 const fs = require('fs');
-const _ = require('lodash');
 
 const input = fs.readFileSync('input.txt').toString().split('\n');
 
@@ -61,9 +60,30 @@ w1Graph.forEach(element => {
 const calculateManhattan = intersections => intersections.map(element => {
     let x  = Number(element.split(',')[0]);
     let y  = Number(element.split(',')[1]);
-    return Math.abs(x) + Math.abs(y)
+
+    return Math.abs(x) + Math.abs(y);
 });
 
 let distances = calculateManhattan(intersections);
 
+let calculateLowestDistance = (wire1, wire2) => {
+    let wireLength = Number.POSITIVE_INFINITY;
+
+    intersections.forEach((intersection) => {
+        let wire1length = wire1.indexOf(intersection) + 1;
+        let wire2length = wire2.indexOf(intersection) + 1;
+        let total = wire1length + wire2length;
+
+        if (total < wireLength) {
+            wireLength = total;
+        }
+    });
+
+    return wireLength;
+};
+
+let w1 = [...w1Graph];
+let w2 = [...w2Graph];
+
 console.log(`Part 1: ${Math.min(...distances)}`);
+console.log(`Part 2: ${calculateLowestDistance(w1, w2)}`);
