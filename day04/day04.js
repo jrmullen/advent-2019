@@ -33,6 +33,3 @@ range.forEach(element => {
 });
 
 console.log(`Part 1: ${part1}`);
-
-
-
